@@ -7,7 +7,6 @@
     <Title>Markdig Confluence Footnote Extension</Title>
     <Description>A Markdig extension that emits Confluence-compatible anchors and links for footnotes.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>$(ReleaseNotes)</PackageReleaseNotes>
     <PackageProjectUrl>https://github.com/bojanrajkovic/MarkdigConfluenceFootnoteExtension</PackageProjectUrl>
     <PackageLicense>MIT</PackageLicense>
     <PackageTags>markdig confluence</PackageTags>
