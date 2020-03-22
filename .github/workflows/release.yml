@@ -6,10 +6,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Dump GitHub Context
-      shell: bash
-      run: |
-        echo "${{ github.event }}" | jq
+    - name: Dump GitHub context
+      env:
+        GITHUB_CONTEXT: ${{ toJson(github) }}
+      run: echo "$GITHUB_CONTEXT"
   push:
     runs-on: ubuntu-latest
     steps:
