@@ -10,7 +10,9 @@ jobs:
       shell: bash
       run: |
         echo "${{ github.event }}" | jq
-  "Push Build To NuGet":
+  push:
+    runs-on: ubuntu-latest
+    steps:
     - name: Push Master Builds To NuGet
       run: >
         dotnet
