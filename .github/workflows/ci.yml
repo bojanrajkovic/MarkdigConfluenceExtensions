@@ -10,8 +10,7 @@ jobs:
     - name: Prepare repository
       run: |
         git checkout master
-        echo "${GITHUB_REF}"
-        git checkout "${GITHUB_REF:11}"
+        git checkout ${GITHUB_REF##*/}
     - name: Set Up .NET Core SDK
       uses: actions/setup-dotnet@v1
       with:
