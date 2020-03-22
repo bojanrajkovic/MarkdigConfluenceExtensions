@@ -27,8 +27,8 @@ jobs:
     - name: Pack NuGet (No Release Notes)
       run: |
         dotnet pack --include-symbols --no-build -c Release -o ./artifacts /p:SymbolPackageFormat=snupkg /p:Version=$PackageVersion /v:minimal
-      if: !startsWith(github.ref, 'refs/tags/')
-    - name: Pack Nuget (With Release Notes)
+      if: "!startsWith(github.ref, 'refs/tags/')"
+    - name: Pack NuGet (With Release Notes)
       run: |
         RELEASE_NOTES=$(curl https://api.github.com/repos/${{ github.repository }}/releases/tags/${GITHUB_REF##*/} | jq -r .body)
         echo $RELEASE_NOTES
