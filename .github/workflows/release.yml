@@ -1,0 +1,22 @@
+name: Push Release NuGet
+on:
+  release:
+    types: [published]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Dump GitHub Context
+      shell: bash
+      run: |
+        echo "${{ github.event }}" | jq
+  "Push Build To NuGet":
+    - name: Push Master Builds To NuGet
+      run: >
+        dotnet
+        nuget
+        push
+        --api-key ${{ secrets.NUGET_API_KEY }}
+        --Source https://api.nuget.org/v3/index.json
+        ./artifacts/*.nupkg
+      if: endsWith(github.ref, 'real-master')
