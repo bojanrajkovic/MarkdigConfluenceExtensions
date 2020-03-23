@@ -28,3 +28,9 @@ incandescent rage. I can only hope that someone besides me will find it useful.
 
 [phpmde]: https://michelf.ca/projects/php-markdown/extra
 [phpmde-footnotes]: https://michelf.ca/projects/php-markdown/extra/#footnotes
+
+## Installing
+
+The package is available [on NuGet][nuget].
+
+[nuget]: https://nuget.org/packages/CodeRinseRepeat.MarkdigConfluenceFootnoteExtension
