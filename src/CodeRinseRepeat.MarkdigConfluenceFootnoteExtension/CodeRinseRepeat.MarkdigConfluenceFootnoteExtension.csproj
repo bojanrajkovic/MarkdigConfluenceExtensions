@@ -16,6 +16,7 @@
     <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
     <RepositoryUrl>https://github.com/bojanrajkovic/MarkdigConfluenceFootnoteExtension</RepositoryUrl>
     <RepositoryType>GitHub</RepositoryType>
+    <PackageReleaseNotes>$(RELEASE_NOTES)</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
