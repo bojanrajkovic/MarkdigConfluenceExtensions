@@ -16,18 +16,7 @@
     <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
     <RepositoryUrl>https://github.com/bojanrajkovic/MarkdigConfluenceFootnoteExtension</RepositoryUrl>
     <RepositoryType>GitHub</RepositoryType>
-    <BeforePack>GetReleaseNotes</BeforePack>
   </PropertyGroup>
-
-  <Target Name="GetReleaseNotes" Condition="Exists('release.json')">
-    <Exec Command="cat release.json | jq -r .body">
-      <Output TaskParameter="Outputs" PropertyName="CapturedReleaseNotes" />
-    </Exec>
-    <PropertyGroup>
-      <PackageReleaseNotes>$(CapturedReleaseNotes)</PackageReleaseNotes>
-      <ReleaseNotes>$(CapturedReleaseNotes)</ReleaseNotes>
-    </PropertyGroup>
-  </Target>
 
   <ItemGroup>
     <PackageReference Include="Markdig" Version="0.18.3" />
