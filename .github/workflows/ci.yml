@@ -59,7 +59,7 @@ jobs:
         nuget
         push
         --api-key ${{ secrets.NUGET_API_KEY }}
-        --Source https://api.nuget.org/v3/index.json
+        --source https://api.nuget.org/v3/index.json
         ./NuGet\ Packages/*.nupkg
   push_to_gh:
     name: Push To GitHub Packages
