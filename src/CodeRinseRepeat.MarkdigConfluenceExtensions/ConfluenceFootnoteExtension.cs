@@ -2,7 +2,7 @@ using Markdig;
 using Markdig.Extensions.Footnotes;
 using Markdig.Renderers;
 
-namespace CodeRinseRepeat.MarkdigConfluenceFootnoteExtension
+namespace CodeRinseRepeat.MarkdigConfluenceExtensions
 {
     public class ConfluenceFootnoteExtension : IMarkdownExtension
     {

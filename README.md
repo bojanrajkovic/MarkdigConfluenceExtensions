@@ -1,4 +1,4 @@
-# Markdig Footnote Extension w/ Confluence Support
+# Markdig Confluence Extensions
 
 This project is the result of me getting very angry.
 
@@ -7,7 +7,7 @@ syntax][phpmde-footnotes] as part of their Markdown extensions. Footnotes are
 occasionally quite useful, especially when one is writing long design documents,
 white papers, etc.
 
-I wanted to use this extension, generate the plain HTML that it emits, and
+I wanted to use those footnotes, generate the plain HTML that it emits, and
 upload that to Confluence as a page's content. What I found though was that
 Confluence would strip the anchors/IDs that the extension was emitting, even
 though they are perfectly valid internal anchors. Near as I can tell, this is
@@ -23,8 +23,11 @@ wonderfully simple. I looked at it, wrote some format strings to emit the markup
 for Confluence's "structured macro" expansions, and reimplemented the two
 renderer classes.
 
-Thus, CodeRinseRepeat.MarkdigConfluenceFootnoteExtension was born out of
-incandescent rage. I can only hope that someone besides me will find it useful.
+Thus, CodeRinseRepeat.MarkdigConfluenceExtensions was born out of incandescent
+rage. I can only hope that someone besides me will find it useful.
+
+Since then, it's also sprouted a Confluence macro extension for generic macro
+expansion. Who knows what else it will sprout.
 
 [phpmde]: https://michelf.ca/projects/php-markdown/extra
 [phpmde-footnotes]: https://michelf.ca/projects/php-markdown/extra/#footnotes
@@ -33,4 +36,4 @@ incandescent rage. I can only hope that someone besides me will find it useful.
 
 The package is available [on NuGet][nuget].
 
-[nuget]: https://nuget.org/packages/CodeRinseRepeat.MarkdigConfluenceFootnoteExtension
+[nuget]: https://nuget.org/packages/CodeRinseRepeat.MarkdigConfluenceExtensions

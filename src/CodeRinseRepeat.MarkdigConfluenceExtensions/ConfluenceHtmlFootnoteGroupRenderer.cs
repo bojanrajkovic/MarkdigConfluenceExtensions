@@ -2,7 +2,7 @@ using Markdig.Extensions.Footnotes;
 using Markdig.Renderers;
 using Markdig.Renderers.Html;
 
-namespace CodeRinseRepeat.MarkdigConfluenceFootnoteExtension
+namespace CodeRinseRepeat.MarkdigConfluenceExtensions
 {
     public class ConfluenceHtmlFootnoteGroupRenderer : HtmlObjectRenderer<FootnoteGroup>
     {

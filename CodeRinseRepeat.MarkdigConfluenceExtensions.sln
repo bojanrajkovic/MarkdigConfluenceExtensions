@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8DDC5786-2E7D-499E-83D9-F30A93D9655D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeRinseRepeat.MarkdigConfluenceFootnoteExtension", "src\CodeRinseRepeat.MarkdigConfluenceFootnoteExtension\CodeRinseRepeat.MarkdigConfluenceFootnoteExtension.csproj", "{851AFBB0-7974-4198-8D4B-D6A30982F6A4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeRinseRepeat.MarkdigConfluenceExtensions", "src\CodeRinseRepeat.MarkdigConfluenceExtensions\CodeRinseRepeat.MarkdigConfluenceExtensions.csproj", "{851AFBB0-7974-4198-8D4B-D6A30982F6A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
