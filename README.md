@@ -29,11 +29,10 @@ rage. I can only hope that someone besides me will find it useful.
 Since then, it's also sprouted a Confluence macro extension for generic macro
 expansion. Who knows what else it will sprout.
 
-[phpmde]: https://michelf.ca/projects/php-markdown/extra
-[phpmde-footnotes]: https://michelf.ca/projects/php-markdown/extra/#footnotes
-
 ## Installing
 
 The package is available [on NuGet][nuget].
 
+[phpmde]: https://michelf.ca/projects/php-markdown/extra
+[phpmde-footnotes]: https://michelf.ca/projects/php-markdown/extra/#footnotes
 [nuget]: https://nuget.org/packages/CodeRinseRepeat.MarkdigConfluenceExtensions
