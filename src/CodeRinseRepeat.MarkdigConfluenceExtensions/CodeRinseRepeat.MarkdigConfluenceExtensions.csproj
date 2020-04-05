@@ -1,5 +1,4 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>CodeRinseRepeat.MarkdigConfluenceExtensions</PackageId>
@@ -16,6 +15,8 @@
     <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
     <RepositoryUrl>https://github.com/bojanrajkovic/MarkdigConfluenceExtensions</RepositoryUrl>
     <RepositoryType>GitHub</RepositoryType>
+    <PackageReleaseNotes>!RELEASE_NOTES!</PackageReleaseNotes>
+    <ReleaseNotesFile>$([MSBuild]::GetPathOfFileAbove(release.json))</ReleaseNotesFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -23,4 +24,28 @@
     <PackageReference Include="Markdig" Version="0.18.3" />
   </ItemGroup>
 
+  <Target Name="UpdateReleaseNotes" Condition='Exists($(ReleaseNotesFile))'>
+    <Exec Command="cat $(ReleaseNotesFile) | jq -r .body" ConsoleToMSBuild="true">
+      <Output TaskParameter="ConsoleOutput" PropertyName="CapturedReleaseNotes" />
+    </Exec>
+    <WriteLinesToFile File="ReleaseNotes.txt" Lines="$(CapturedReleaseNotes)" />
+    <UpdateReleaseNotes File="$(MSBuildThisFileFullPath)" />
+    <Delete Files="ReleaseNotes.txt" />
+  </Target>
+
+  <UsingTask TaskName="UpdateReleaseNotes"
+             TaskFactory="RoslynCodeTaskFactory"
+             AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.Core.dll">
+    <ParameterGroup>
+      <File ParameterType="System.String" Required="true" />
+    </ParameterGroup>
+    <Task>
+      <Code Type="Fragment" Language="cs"><![CDATA[
+        var content = System.IO.File.ReadAllText(File);
+        var replacement = System.IO.File.ReadAllText("ReleaseNotes.txt");
+        content = content.Replace(string.Format("!{0}!", "RELEASE_NOTES"), string.Join(Environment.NewLine, replacement));
+        System.IO.File.WriteAllText(File, content);
+      ]]></Code>
+    </Task>
+  </UsingTask>
 </Project>
