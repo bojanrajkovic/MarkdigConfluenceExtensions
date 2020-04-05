@@ -2,19 +2,19 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <PackageId>CodeRinseRepeat.MarkdigConfluenceFootnoteExtension</PackageId>
+    <PackageId>CodeRinseRepeat.MarkdigConfluenceExtensions</PackageId>
     <Authors>Bojan Rajkovic</Authors>
-    <Title>Markdig Confluence Footnote Extension</Title>
-    <Description>A Markdig extension that emits Confluence-compatible anchors and links for footnotes.</Description>
+    <Title>Markdig Confluence Extensions</Title>
+    <Description>Markdig xtensions that emit Confluence-compatible anchors and links for footnotes, and add Confluence macro support.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageProjectUrl>https://github.com/bojanrajkovic/MarkdigConfluenceFootnoteExtension</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/bojanrajkovic/MarkdigConfluenceExtensions</PackageProjectUrl>
     <PackageLicense>MIT</PackageLicense>
     <PackageTags>markdig confluence</PackageTags>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
     <GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
     <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
-    <RepositoryUrl>https://github.com/bojanrajkovic/MarkdigConfluenceFootnoteExtension</RepositoryUrl>
+    <RepositoryUrl>https://github.com/bojanrajkovic/MarkdigConfluenceExtensions</RepositoryUrl>
     <RepositoryType>GitHub</RepositoryType>
   </PropertyGroup>
 
